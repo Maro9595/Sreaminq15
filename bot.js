@@ -17,14 +17,14 @@ client.on('message', message => {
   if (message.content.startsWith(prefix + 'wt')) {
   client.user.setActivity(argresult, {type: 'WATCHING'})
      console.log('test' + argresult);
-    message.channel.sendMessage(`Watch Now: تم تغيير الحالة الي${argresult}`)
+    message.channel.sendMessage(`Watch Now:  Status Has Been Changed :white_check_mark${argresult}`)
 } 
 
  
   if (message.content.startsWith(prefix + 'ls')) {
   client.user.setActivity(argresult, {type: 'LISTENING'})
      console.log('test' + argresult);
-    message.channel.sendMessage(`LISTENING Now: تم تغيير الحالة الي${argresult}`)
+    message.channel.sendMessage(`LISTENING Now:  Status Has Been Changed :white_check_mark${argresult}`)
 } 
 
 
@@ -42,7 +42,7 @@ if (message.content.startsWith(prefix + 'setavatar')) {
 if (message.content.startsWith(prefix + 'st')) {
   client.user.setGame(argresult, "https://www.twitch.tv/peery13");
      console.log('test' + argresult);
-    message.channel.sendMessage(`Streaming: تم تغيير الحالة الي${argresult}`)
+    message.channel.sendMessage(`Streaming: Status Has Been Changed :white_check_mark${argresult}`)
 } 
 if (message.content.startsWith(prefix + 'ply')) {
   client.user.setGame(argresult);
