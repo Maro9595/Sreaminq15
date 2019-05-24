@@ -5,7 +5,7 @@ var client = new Discord.Client();
 client.on('ready', () => {
   console.log(`Welcome Bro ${client.user.tag}!`);
 });
-var prefix = 'm!'
+var prefix = '-'
 
 client.on('message', message => {
   if (!message.content.startsWith(prefix)) return;
@@ -17,37 +17,37 @@ client.on('message', message => {
   if (message.content.startsWith(prefix + 'wt')) {
   client.user.setActivity(argresult, {type: 'WATCHING'})
      console.log('test' + argresult);
-    message.channel.sendMessage(`Watch Now:  Status Has Been Changed :white_check_mark:${argresult}`)
+    message.channel.sendMessage(`:white_check_mark: | The Watching Status Has Been Changed To : ${argresult}`)
 } 
 
  
-  if (message.content.startsWith(prefix + 'ls')) {
+  if (message.content.startsWith(prefix + 'lis')) {
   client.user.setActivity(argresult, {type: 'LISTENING'})
      console.log('test' + argresult);
-    message.channel.sendMessage(`LISTENING Now:  Status Has Been Changed :white_check_mark:${argresult}`)
+    message.channel.sendMessage(`:white_check_mark: | The Listning Status Has Been Changed To : ${argresult}`)
 } 
 
 
 if (message.content.startsWith(prefix + 'setname')) {
   client.user.setUsername(argresult).then
-      message.channel.sendMessage(`Username Changed To تم تغيير الاسم الي${argresult}**`)
+      message.channel.sendMessage(`:white_check_mark: | The Username Status Has Been Changed To : ${argresult}**`)
   return message.reply("You Can change the username 2 times per hour");
 } 
 
 if (message.content.startsWith(prefix + 'setavatar')) {
   client.user.setAvatar(argresult);
-   message.channel.sendMessage(`Avatar Changed Successfully To تم تغييرالصورة الي${argresult}**`);
+   message.channel.sendMessage(`:white_check_mark: | The Avatar Status Has Been Changed To : ${argresult}**`);
 }
 
 if (message.content.startsWith(prefix + 'st')) {
   client.user.setGame(argresult, "https://www.twitch.tv/peery13");
      console.log('test' + argresult);
-    message.channel.sendMessage(`Streaming: Status Has Been Changed :white_check_mark:${argresult}`)
+    message.channel.sendMessage(`:white_check_mark: | The Streaming Status Has Been Changed To : ${argresult}`)
 } 
 if (message.content.startsWith(prefix + 'ply')) {
   client.user.setGame(argresult);
      console.log('test' + argresult);
-    message.channel.sendMessage(`Playing: تم تغير الحالة الي${argresult}`)
+    message.channel.sendMessage(`:white_check_mark: | The Playing Status Has Been Changed To : ${argresult}`)
 } 
 
 
